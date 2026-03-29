@@ -107,5 +107,5 @@ Make sure MySQL is running before starting the application.
 
 ## Author
 
-Mohammed Youse
+Mohammed Yousef
 Computer Science and Engineering Student
