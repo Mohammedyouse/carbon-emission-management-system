@@ -2,7 +2,11 @@
 
 ## Project Overview
 
-The Carbon Emission Management System is a Java-based application that helps manage and analyze carbon emission data using a MySQL database. The system allows storing emission records, running queries, and generating reports for analysis.
+The Carbon Emission Management System is a Java-based application that manages and analyzes carbon emission data using a MySQL database. The system allows storing emission records, executing SQL queries, and generating reports for analysis and decision making.
+
+This project demonstrates database design, SQL scripting, and Java database connectivity using JDBC.
+
+---
 
 ## Technologies Used
 
@@ -11,42 +15,97 @@ The Carbon Emission Management System is a Java-based application that helps man
 * MySQL
 * JDBC
 * SQL
+* Git & GitHub
+
+---
 
 ## Project Structure
 
 ```
-src/                     → Java source code  
-pom.xml                  → Maven configuration  
-carbon_emissions_schema.sql  
-carbon_emissions_sample_data.sql  
-carbon_emissions_queries.sql  
-README.md
+carbon-emission-management-system
+│
+├── src/                               # Java source code
+├── pom.xml                            # Maven configuration
+├── README.md                          # Project documentation
+├── carbon_emissions_schema.sql        # Database schema
+├── carbon_emissions_sample_data.sql   # Sample data
+├── carbon_emissions_queries.sql       # SQL queries
+├── create_and_run_all.sql             # Run all SQL scripts
+└── .gitignore
 ```
 
-## How to Run the Project
+---
 
-1. Open MySQL and create database.
-2. Run SQL scripts:
+## Database Setup
+
+This project uses MySQL database.
+
+### Steps to setup database:
+
+1. Open MySQL.
+2. Create database:
+
+   ```
+   CREATE DATABASE carbon_emissions_db;
+   ```
+3. Select database:
+
+   ```
+   USE carbon_emissions_db;
+   ```
+4. Run SQL scripts:
 
    * carbon_emissions_schema.sql
    * carbon_emissions_sample_data.sql
    * carbon_emissions_queries.sql
-3. Open project in terminal.
-4. Run:
+
+   OR run:
 
    ```
-   mvn clean package
-   mvn exec:java
+   create_and_run_all.sql
    ```
+
+This will create all tables and insert sample data required for the project.
+
+---
+
+## How to Run the Java Application
+
+Open terminal in the project folder and run:
+
+```
+mvn clean package
+mvn exec:java
+```
+
+Make sure MySQL is running before starting the application.
+
+---
 
 ## Features
 
-* Carbon emission data storage
+* Carbon emission data management
+* Database schema design
 * SQL queries and reports
-* Database integration using JDBC
+* Java MySQL connection using JDBC
 * Maven project structure
 * Role-based SQL scripts
+* Sample dataset for testing
+
+---
+
+## Learning Outcomes
+
+* Database design and normalization
+* Writing SQL schema and queries
+* Java database connectivity (JDBC)
+* Maven project management
+* GitHub project management
+* Backend application development
+
+---
 
 ## Author
 
 Mohammed Youse
+Computer Science and Engineering Student
