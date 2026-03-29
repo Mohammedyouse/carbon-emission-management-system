@@ -1,101 +1,111 @@
-# Carbon Emissions Database Java Application
+# Carbon Emission Management System
 
-This Java application demonstrates how to connect to the `carbon_emissions_db` MySQL database using JDBC 
-and interact with the stored procedures and functions.
+## Project Overview
 
-## Prerequisites
+The Carbon Emission Management System is a Java-based application that manages and analyzes carbon emission data using a MySQL database. The system allows storing emission records, executing SQL queries, and generating reports for analysis and decision making.
 
-1. Java 11 or higher
-2. Maven
-3. MySQL Server with the `carbon_emissions_db` database initialized
+This project demonstrates database design, SQL scripting, and Java database connectivity using JDBC.
 
-## Setup
+---
 
-1. Clone this repository or download the source code.
+## Technologies Used
 
-2. Make sure your MySQL server is running and the `carbon_emissions_db` database is created with 
-   all the required tables, procedures, and functions (as defined in `carbon_emissions_plsql.sql`).
+* Java
+* Maven
+* MySQL
+* JDBC
+* SQL
+* Git & GitHub
 
-3. Update the database connection details in `src/main/java/com/carbon/emissions/CarbonEmissionsDBConnection.java`:
-   ```java
-   private static final String DB_URL = "jdbc:mysql://localhost:3306/carbon_emissions_db";
-   private static final String USER = "root";
-   private static final String PASSWORD = "lakshya@123"; // Change this to your actual password
+---
+
+## Project Structure
+
+```
+carbon-emission-management-system
+│
+├── src/                               # Java source code
+├── pom.xml                            # Maven configuration
+├── README.md                          # Project documentation
+├── carbon_emissions_schema.sql        # Database schema
+├── carbon_emissions_sample_data.sql   # Sample data
+├── carbon_emissions_queries.sql       # SQL queries
+├── create_and_run_all.sql             # Run all SQL scripts
+└── .gitignore
+```
+
+---
+
+## Database Setup
+
+This project uses MySQL database.
+
+### Steps to setup database:
+
+1. Open MySQL.
+2. Create database:
+
+   ```
+   CREATE DATABASE carbon_emissions_db;
+   ```
+3. Select database:
+
+   ```
+   USE carbon_emissions_db;
+   ```
+4. Run SQL scripts:
+
+   * carbon_emissions_schema.sql
+   * carbon_emissions_sample_data.sql
+   * carbon_emissions_queries.sql
+
+   OR run:
+
+   ```
+   create_and_run_all.sql
    ```
 
-4. Open a terminal or command prompt and navigate to the project's root directory (where the `pom.xml` file is located).
+This will create all tables and insert sample data required for the project.
 
-## Building the Application
+---
 
-Run the following Maven command to build the application:
+## How to Run the Java Application
 
-```bash
+Open terminal in the project folder and run:
+
+```
 mvn clean package
+mvn exec:java
 ```
 
-This will compile the code and create a JAR file in the `target` directory.
+Make sure MySQL is running before starting the application.
 
-## Running the Application
+---
 
-You can run either of the two main classes to test the application:
+## Features
 
-### Testing the Database Connection
+* Carbon emission data management
+* Database schema design
+* SQL queries and reports
+* Java MySQL connection using JDBC
+* Maven project structure
+* Role-based SQL scripts
+* Sample dataset for testing
 
-```bash
-# Using Maven
-mvn exec:java -Dexec.mainClass="com.carbon.emissions.CarbonEmissionsDBConnection"
+---
 
-# Or using Java directly
-java -cp target/carbon-emissions-db-1.0-SNAPSHOT.jar com.carbon.emissions.CarbonEmissionsDBConnection
-```
+## Learning Outcomes
 
-This will test if the connection to the database can be established successfully.
+* Database design and normalization
+* Writing SQL schema and queries
+* Java database connectivity (JDBC)
+* Maven project management
+* GitHub project management
+* Backend application development
 
-### Testing Data Access Methods
+---
 
-```bash
-# Using Maven
-mvn exec:java -Dexec.mainClass="com.carbon.emissions.CarbonEmissionsDataAccess"
+## Author
 
-# Or using Java directly
-java -cp target/carbon-emissions-db-1.0-SNAPSHOT.jar com.carbon.emissions.CarbonEmissionsDataAccess
-```
-
-This will demonstrate calling the stored procedures and functions from the database.
-
-## Troubleshooting
-
-- If you get a "MySQL JDBC Driver not found" error, make sure the MySQL Connector/J dependency is correctly 
-  included in your Maven build.
-  
-- If you get a connection error, verify that:
-  - Your MySQL server is running
-  - The `carbon_emissions_db` database exists
-  - The user credentials are correct
-  - The MySQL server is accessible from your machine
-
-- If the stored procedures or functions are not found, ensure that you've run the SQL script 
-  (`carbon_emissions_plsql.sql`) to create them in the database. 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-                                  // How to Run the project : //
-// Step_1 : 
-
-// open  My skl 
-// Enter your password : 71860015 //
-// show databases; 
-// Use carbon_emissions_db ;
-
-// Step_2 : 
-
-// Go to   D:\SYMBIOSIS UNIVERSITY\Second Year\Fourth Semester\Flexi-Credit Course (Java )\carbon-emission-management-main (2)         ---> open it from vs code 
-
-// Run this in terminal :
-// mvn clean package
-// mvn exec:java
-
-
-// Step_3 :
-// log in with this user name = root  && password = 71860015
+Mohammed Yousef
+Computer Science and Engineering Student
